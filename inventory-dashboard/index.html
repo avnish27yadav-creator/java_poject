@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Inventory & Analytics Dashboard</title>
+
+  <!-- Link our CSS file (all the styling lives in style.css) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>📦 Product Inventory &amp; Analytics Dashboard</h1>
+    <p>JavaScript Capstone Mini Project</p>
+  </header>
+
+  <main>
+    <!-- Buttons: clicking them runs functions written in script.js -->
+    <section class="controls">
+      <button id="addBtn">➕ Add Product</button>
+      <button id="resetBtn" class="secondary">🔄 Reset</button>
+    </section>
+
+    <!-- Summary cards: JavaScript fills in the numbers -->
+    <section class="cards">
+      <div class="card"><span>Total Products</span><strong id="countCard">0</strong></div>
+      <div class="card"><span>Total Inventory Value</span><strong id="totalCard">$0</strong></div>
+      <div class="card"><span>Affordable (Under $200)</span><strong id="affordCard">0</strong></div>
+    </section>
+
+    <!-- Table: JavaScript fills the rows using forEach -->
+    <section>
+      <h2>Inventory Roster</h2>
+      <table>
+        <thead>
+          <tr><th>#</th><th>Item</th><th>Price</th><th>Category</th></tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </section>
+
+    <!-- Console-style output that matches the project's expected output -->
+    <section>
+      <h2>Console Output</h2>
+      <pre id="output"></pre>
+      <p class="hint">Tip: press F12 and open the Console tab to see the same output there.</p>
+    </section>
+  </main>
+
+  <!-- Load JS at the END so the HTML elements above already exist -->
+  <script src="script.js"></script>
+</body>
+</html>
